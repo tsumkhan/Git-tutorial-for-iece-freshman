@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
+
+
 % ------------------------------------------------
 % Packages
 % ------------------------------------------------
@@ -13,9 +15,13 @@
 \usepackage{fancyvrb}
 \usepackage{tcolorbox}
 \usepackage{amsmath}
+\usepackage{float}
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{parskip}
 
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 
@@ -119,6 +125,12 @@ Ahmed adds his changes:
 Science_Project_Ahmed.docx
 \end{code}
 
+
+
+
+
+
+
 Now you have a problem:
 
 \begin{itemize}
@@ -164,6 +176,18 @@ Every important point in the project's history is saved. We can look at the hist
 \end{itemize}
 
 This is the basic idea behind \textbf{version control}. Version control keeps a history of your files so you can understand and manage changes over time.
+
+
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_chaos.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
 
 % =================================================
 \section{Git: Our Time Machine}
@@ -333,6 +357,18 @@ Git also creates a hidden \texttt{.git} folder inside the project. This is where
 
 \textbf{Do not modify or delete the \texttt{.git} folder.}
 
+
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_init.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
+
 % -------------------------------------------------
 \subsection{Step 3: Ask Git What Is Happening}
 % -------------------------------------------------
@@ -351,6 +387,19 @@ You may see something similar to:
 Untracked files:
     calculator.py
 \end{code}
+
+%Sumaira changes start here
+This is what the same command will look like for you on you command line interface (CLI)
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/git_status.png}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
 
 Git has noticed our file, but there is an important point:
 
@@ -380,6 +429,17 @@ Think of it like this:
 \draw[->, thick] (file) -- node[right]{Git sees it} (status);
 \end{tikzpicture}
 \end{center}
+
+%Sumaira changes start here
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/fig_lifecycle.pdf}
+%     %\caption{Chaos!}
+%     %\label{fig:myimage}
+% \end{figure}
+
+%Sumaira changes end here
 
 We are now ready to make our first saved version.
 
@@ -458,6 +518,10 @@ git commit -m "Create calculator"
 
 Let's understand them one at a time.
 
+
+
+
+
 % -------------------------------------------------
 \subsection{Step 1: Prepare the File with git add}
 % -------------------------------------------------
@@ -507,6 +571,11 @@ The important thing to notice is:
 \end{center}
 
 It prepares the changes that we want to save.
+
+
+
+
+%Sumaira changes end here
 
 % -------------------------------------------------
 \subsection{Step 2: Save the Version with git commit}
@@ -566,6 +635,25 @@ Think of the commit as pressing the \textbf{Save Point} button on our time machi
 
 This saved point is called a \textbf{commit}.
 
+
+
+
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_three_areas.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_lifecycle.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
 % -------------------------------------------------
 \subsection{Step 3: Check the Repository Again}
 % -------------------------------------------------
@@ -635,6 +723,15 @@ Add input validation
 Improve error message
 \end{code}
 
+%Sumaira changes start here
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_messages.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+%Sumaira changes end here
+
 A good commit message should answer:
 
 \begin{quote}
@@ -642,7 +739,6 @@ A good commit message should answer:
 \end{quote}
 
 Keep it short and meaningful.
-
 % =================================================
 \section{The Important Difference: add vs commit}
 % =================================================
@@ -664,6 +760,10 @@ Students often confuse these two commands, so remember:
 \draw[->, thick] (commit) -- (text2);
 \end{tikzpicture}
 \end{center}
+
+
+
+
 
 Or, using our time-machine analogy:
 
@@ -795,6 +895,18 @@ a82f31 Create calculator
 
 This is often easier to read.
 
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_anatomy.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
+
+
 % =================================================
 \section{What Did I Change?}
 % =================================================
@@ -853,6 +965,18 @@ So \texttt{git diff} answers:
 ``What have I changed since my last commit?''
 \end{quote}
 
+
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_diff.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
+
 % =================================================
 \section{The Complete Git Cycle}
 % =================================================
@@ -878,6 +1002,18 @@ Show my saved versions & \texttt{git log --oneline}
 The dot in \texttt{git add .} is part of the command.
 
 Put together:
+
+
+%Sumaira changes start here
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/fig_workflow.pdf}
+%     %\caption{Chaos!}
+%     %\label{fig:myimage}
+% \end{figure}
+
+%Sumaira changes end here
 
 \begin{center}
 \begin{tikzpicture}[
@@ -995,6 +1131,18 @@ $\rightarrow$
 
 You are building a history of your project as you work.
 
+
+%Sumaira changes start here
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/fig_timeline.pdf}
+%     %\caption{Chaos!}
+%     %\label{fig:myimage}
+% \end{figure}
+
+%Sumaira changes end here
+
 % =================================================
 \section{Git Cheat Sheet}
 % =================================================
@@ -1033,4 +1181,122 @@ Think of it as a conversation with your project:
 
 And that is enough to get started with Git :-)
 
+%Sumaira changes start here
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/fig_conversation.pdf}
+    %\caption{Chaos!}
+    %\label{fig:myimage}
+\end{figure}
+
+%Sumaira changes end here
+
+
+
+% Sumaira Changes Start here
+
+
+\section{Looking Ahead: When You Are Not Working Alone}
+
+Remember how we started? Three students were working on the same project:
+
+\begin{itemize}
+  \item Ali changed the introduction,
+  \item Sara fixed the introduction,
+  \item Ahmed added his changes.
+\end{itemize}
+
+And we asked three questions: \emph{Which file is correct? What did each person
+change? Can we go back to an earlier version?}
+
+
+% \noindent\rule{\textwidth}{0.4pt}
+
+Everything in this tutorial, \texttt{git commit}, \texttt{git log}, \texttt{git diff},
+going back --- answers those questions for \textbf{one person working alone}.
+Your project now has a personal time machine.
+
+% \noindent\rule{\textwidth}{0.4pt}
+
+
+But look closely: Ali, Sara, and Ahmed each built their \emph{own} time machine
+on their \emph{own} laptop. That doesn't help them work together yet. If Ali
+makes a commit on his laptop, Sara has no way to see it. So one question from the
+very beginning is still open:
+
+\begin{center}
+\emph{How do several people share one history?}
+\end{center}
+
+That is the next chapter, and the tool is \textbf{GitHub}.
+
+GitHub is a place on the internet where a Git repository can live so that everyone
+can reach it. Think of it as \textbf{one shared time machine in the cloud} that
+Ali, Sara, and Ahmed all connect to.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth]{images/fig_collab.pdf}
+  \caption{One shared history: everyone \emph{pushes} their commits up to the same
+  GitHub repository and \emph{pulls} everyone else's down.}
+  \label{fig:collab}
+\end{figure}
+
+Here is the idea, not the full mechanics yet:
+
+\begin{itemize}
+  \item Everyone keeps their own copy of the project, with the full history, on
+        their own machine, exactly the repository you built in this tutorial.
+  \item Everyone connects that copy to the same shared repository on GitHub.
+  \item When you finish some work, you send your commits \textbf{up} to GitHub.
+        This is called a \textbf{push}.
+  \item When you want everyone else's latest work, you bring their commits
+        \textbf{down}. This is called a \textbf{pull}.
+  \item If two people changed \emph{different} things, Git combines them for you
+        automatically (a \textbf{merge}). If they changed the \emph{same} line,
+        Git stops and asks a human to decide  (a \textbf{merge conflict}).
+\end{itemize}
+
+So the messy folder of \texttt{Science\_Project\_Ali.docx},
+\texttt{Science\_Project\_Sara.docx}, and \texttt{Science\_Project\_Ahmed.docx}
+simply disappears. There is one project, one shared history, and everyone's
+changes flow into it.
+
+\bigskip
+\noindent\textbf{A quick look ahead} (you don't need these yet, just meet the words):
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Term} & \textbf{Meaning (for now)} \\
+\hline
+GitHub & A website that hosts your Git repository so others can reach it \\
+\hline
+clone  & Make your own copy of a project that already exists on GitHub \\
+\hline
+push   & Send your commits up to GitHub \\
+\hline
+pull   & Bring other people's commits down to your copy \\
+\hline
+merge  & Combine changes from different people into one history \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\noindent The one idea to hold on to:
+
+\begin{itemize}
+  \item \textbf{Git} (this tutorial) $=$ save and manage your project's history
+        \emph{on your own machine}.
+  \item \textbf{GitHub} (next) $=$ \emph{share} that history so a whole team can
+        work on it together.
+\end{itemize}
+
+We'll pick up Ali, Sara, and Ahmed's story there. :-)
+
+
+
+% Sumaira Changes End here
 \end{document}
